@@ -1,68 +1,103 @@
+/* Variables de color */
+:root {
+    --primary-color: #0056b3;
+    --secondary-color: #003366;
+    --accent-color: #00a8e8;
+    --text-light: #ffffff;
+    --text-dark: #333333;
+}
+
+/* Estilos generales */
 body {
-    background: linear-gradient(135deg, #007bff, #00bfff);
+    background: linear-gradient(135deg, var(--secondary-color), var(--primary-color));
     height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     margin: 0;
-    padding: 0;
-}
-
-.contenedor-acceso {
-    width: 100%;
-    max-width: 450px;
     padding: 20px;
 }
 
-.tarjeta-acceso {
-    background: white;
-    border-radius: 15px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+/* Contenedor principal */
+.login-container {
+    width: 100%;
+    max-width: 420px;
+    background: rgba(255, 255, 255, 0.96);
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
     overflow: hidden;
-    padding: 30px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.login-container:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
+}
+
+/* Cabecera */
+.login-header {
+    padding: 30px 20px;
     text-align: center;
+    background: var(--primary-color);
+    color: var(--text-light);
 }
 
-.logo-banco {
-    margin-bottom: 30px;
-    color: #007bff;
-}
-
-.logo-banco i {
-    font-size: 50px;
+.login-header i {
+    font-size: 3.5rem;
     margin-bottom: 15px;
+    color: var(--text-light);
 }
 
-.logo-banco h1 {
-    font-weight: 700;
-    font-size: 28px;
+.login-header h1 {
     margin: 0;
+    font-size: 2rem;
+    font-weight: 700;
 }
 
-.formulario-acceso {
-    margin-top: 20px;
+.login-header p {
+    margin: 10px 0 0;
+    font-size: 0.9rem;
+    opacity: 0.9;
 }
 
-.btn-acceso {
+/* Formulario */
+.login-form {
+    padding: 30px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.login-button {
     width: 100%;
     padding: 12px;
-    font-weight: 600;
-    letter-spacing: 0.5px;
-    border-radius: 8px;
-    background-color: #007bff;
+    background: var(--accent-color);
+    color: var(--text-light);
     border: none;
-    transition: all 0.3s;
+    border-radius: 6px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
 }
 
-.btn-acceso:hover {
-    background-color: #0069d9;
+.login-button:hover {
+    background: #0088cc;
     transform: translateY(-2px);
-    box-shadow: 0 5px 15px rgba(0, 123, 255, 0.4);
 }
 
-.pie-tarjeta {
-    margin-top: 30px;
-    padding-top: 15px;
+.login-button i {
+    margin-right: 8px;
+}
+
+/* Pie de página */
+.login-footer {
+    padding: 15px;
+    text-align: center;
+    font-size: 0.8rem;
+    color: var(--text-dark);
+    opacity: 0.7;
     border-top: 1px solid #eee;
 }
