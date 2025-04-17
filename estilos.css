@@ -1,0 +1,68 @@
+body {
+    background: linear-gradient(135deg, #007bff, #00bfff);
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.contenedor-acceso {
+    width: 100%;
+    max-width: 450px;
+    padding: 20px;
+}
+
+.tarjeta-acceso {
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    padding: 30px;
+    text-align: center;
+}
+
+.logo-banco {
+    margin-bottom: 30px;
+    color: #007bff;
+}
+
+.logo-banco i {
+    font-size: 50px;
+    margin-bottom: 15px;
+}
+
+.logo-banco h1 {
+    font-weight: 700;
+    font-size: 28px;
+    margin: 0;
+}
+
+.formulario-acceso {
+    margin-top: 20px;
+}
+
+.btn-acceso {
+    width: 100%;
+    padding: 12px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    border-radius: 8px;
+    background-color: #007bff;
+    border: none;
+    transition: all 0.3s;
+}
+
+.btn-acceso:hover {
+    background-color: #0069d9;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0, 123, 255, 0.4);
+}
+
+.pie-tarjeta {
+    margin-top: 30px;
+    padding-top: 15px;
+    border-top: 1px solid #eee;
+}

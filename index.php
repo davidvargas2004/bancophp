@@ -1,4 +1,10 @@
 <?php
+session_start();
+if (!isset($_SESSION['acceso'])) {
+    header("Location: inicio.php");
+    exit;
+}
+
 require 'conexion.php';
 require 'Cuenta.php';
 
