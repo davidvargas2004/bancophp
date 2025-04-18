@@ -18,54 +18,49 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Acceso | Banco HBC</title>
-    <link href="css/estilos.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/estilos-inicio.css">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
 </head>
-<body>
-    <div class="background"></div>
+<body class="inicio-page">
+    <!-- Efecto de partículas opcional -->
+    <div class="particles" id="particles-js"></div>
+    
     <div class="login-container">
-        <div class="login-card">
-            <div class="login-header">
-                <div class="bank-icon">
-                    <i class="fas fa-university"></i>
-                </div>
-                <h1>Banco HBC</h1>
-                <p class="subtitle">Sistema de Gestión Bancaria</p>
-            </div>
-            
-            <form method="post" class="login-form">
-                <div class="form-group">
-                    <label for="username">Usuario</label>
-                    <input type="text" id="username" placeholder="Ingrese su usuario">
-                </div>
-                
-                <div class="form-group">
-                    <label for="password">Contraseña</label>
-                    <input type="password" id="password" placeholder="Ingrese su contraseña">
-                    <i class="fas fa-eye toggle-password"></i>
-                </div>
-                
-                <div class="form-options">
-                    <label class="remember-me">
-                        <input type="checkbox"> Recordar usuario
-                    </label>
-                    <a href="#" class="forgot-password">¿Olvidó su contraseña?</a>
-                </div>
-                
-                <button type="submit" class="login-button">
-                    <i class="fas fa-sign-in-alt"></i> Ingresar al Sistema
-                </button>
-            </form>
-            
-            <div class="login-footer">
-                <p>Versión 1.0 &copy; <?php echo date('Y'); ?> Banco HBC. Todos los derechos reservados.</p>
-                <div class="security-info">
-                    <i class="fas fa-lock"></i>
-                    <span>Sistema seguro</span>
-                </div>
-            </div>
+        <div class="bank-logo">
+            <i class="fas fa-university"></i>
+            <h1>Banco HBC</h1>
+            <p>Tu seguridad financiera es nuestra prioridad</p>
         </div>
+        <form method="post">
+            <button type="submit" class="login-btn">
+                <i class="fas fa-sign-in-alt"></i> Ingresar al Sistema
+            </button>
+        </form>
     </div>
+    
+    <script>
+        // Inicializar partículas (opcional)
+        if(typeof particlesJS !== 'undefined') {
+            particlesJS("particles-js", {
+                "particles": {
+                    "number": {"value": 60, "density": {"enable": true, "value_area": 800}},
+                    "color": {"value": "#ffffff"},
+                    "shape": {"type": "circle"},
+                    "opacity": {"value": 0.5, "random": true},
+                    "size": {"value": 3, "random": true},
+                    "line_linked": {"enable": true, "distance": 150, "color": "#ffffff", "opacity": 0.3, "width": 1},
+                    "move": {"enable": true, "speed": 2, "direction": "none", "random": true, "straight": false, "out_mode": "out"}
+                },
+                "interactivity": {
+                    "detect_on": "canvas",
+                    "events": {
+                        "onhover": {"enable": true, "mode": "repulse"},
+                        "onclick": {"enable": true, "mode": "push"}
+                    }
+                }
+            });
+        }
+    </script>
 </body>
 </html>

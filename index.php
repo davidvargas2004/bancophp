@@ -141,5 +141,6 @@ if (isset($_POST['consultar'])) {
         <div class="alert alert-info"><?php echo $mensaje; ?></div>
     <?php endif; ?>
 
+    <a href="logout.php" class="btn btn-danger">Cerrar sesión</a>
 </body>
 </html>
